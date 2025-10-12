@@ -1,0 +1,405 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 217.2 91.2% 59.8%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 224.3 76.3% 48%;
+
+  /* RGB values for glow effects */
+  --red-rgb: 230, 57, 70;
+  --blue-rgb: 0, 180, 216;
+  --green-rgb: 0, 193, 110;
+  --yellow-rgb: 255, 200, 87;
+  --pink-rgb: 255, 107, 149;
+  --purple-rgb: 157, 78, 221;
+  --orange-rgb: 255, 120, 73;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground transition-colors duration-300;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+code,
+pre {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.font-georgia {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.dark {
+  --bg-background: #121212;
+  --bg-dark-light: #1e1e1e;
+  --text-cream: #f8f4e3;
+}
+
+.light {
+  --bg-background: #f5f2e8;
+  --bg-dark-light: #e9e5d4;
+  --text-cream: #121212;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-red/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-red/50;
+}
+
+/* Gradient text animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-gradient-to-r {
+  background-size: 200% auto;
+  animation: gradient 5s ease infinite;
+}
+
+/* Card hover effects */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-20deg);
+  }
+}
+
+.card-hover-effect {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.card-hover-effect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%) skewX(-20deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-hover-effect:hover::after {
+  animation: shine 1.5s forwards;
+  opacity: 1;
+}
+
+/* Advanced border animation */
+@keyframes borderPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.card-hover-effect:hover {
+  animation: borderPulse 2s infinite;
+}
+
+/* Text glow effect for dark mode */
+.dark .text-red {
+  text-shadow: 0 0 10px rgba(230, 57, 70, 0.3);
+}
+
+/* Text glow effect for light mode */
+.light .hero-title {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Floating animation for skills and hero elements */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.95);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Skill card hover effect */
+.skill-card {
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Expand/collapse animation */
+.skill-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.skill-details.expanded {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Dark mode card hover animation */
+.dark .card-hover-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transition: 0.5s;
+  z-index: 0;
+}
+
+.dark .card-hover-effect:hover::before {
+  left: 100%;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+
+/* Professional Section Styling */
+section {
+  scroll-margin-top: 100px;
+}
+
+/* Improved Typography */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Professional Spacing */
+.section-padding {
+  @apply py-16 sm:py-20 lg:py-24;
+}
+
+/* Enhanced Card Styling */
+.professional-card {
+  @apply rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .py-20 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .skill-badge {
+    font-size: 0.75rem;
+  }
+}
+
+/* Spin animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
+
+/* Mobile menu animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mobile-menu {
+  animation: slideIn 0.3s ease forwards;
+}
+
+/* Responsive typography */
+.responsive-heading {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.responsive-subheading {
+  font-size: clamp(1.25rem, 4vw, 2rem);
+}
+
+.responsive-text {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  @apply outline-none ring-2 ring-red ring-offset-2;
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Professional hover effects */
+a,
+button {
+  @apply transition-all duration-300;
+}
+
+/* Enhanced shadow utilities */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(230, 57, 70, 0.3);
+}
+
+.dark .shadow-glow {
+  box-shadow: 0 0 30px rgba(230, 57, 70, 0.5);
+}
