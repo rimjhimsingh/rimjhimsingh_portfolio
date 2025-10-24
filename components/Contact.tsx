@@ -36,8 +36,8 @@ const Contact = () => {
     {
       icon: <MapPin className="h-5 w-5 sm:h-6 sm:w-6" />,
       title: "Where's Rimjhim?",
-      value: "Binghamton, NY",
-      href: "https://maps.google.com/?q=Binghamton,NY",
+      value: "New York, USA",
+      href: "https://maps.google.com/?q=New+York,USA",
       color: "orange",
     },
   ]

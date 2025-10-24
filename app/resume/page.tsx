@@ -38,7 +38,7 @@ export default function ResumePage() {
               </Button>
               <Button asChild className="bg-red hover:bg-red/80 text-white">
                 <a
-                  href="https://drive.google.com/file/d/1KVl_FgQjrfS9he6ad87S59sAToZ--icI/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1v4XOiFfFYz_qHKjq0zas8Cs4PwYOpMmn/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -57,7 +57,7 @@ export default function ResumePage() {
             <div className="text-center mb-8 pb-6 border-b dark:border-gray-700">
               <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-red">Rimjhim Singh</h2>
               <p className="text-gray-600 dark:text-gray-300">
-                USA, Open to Relocation | (607) 296-9734 | rimjhimsingh5232@gmail.com
+                San Jose, CA | (607) 296-9734 | rimjhimsingh5232@gmail.com
               </p>
               <div className="flex justify-center gap-4 mt-2">
                 <a
@@ -84,13 +84,13 @@ export default function ResumePage() {
               </div>
             </div>
 
-            {/* Professional Summary */}
+            {/* Summary */}
             <section className="mb-8">
-              <h3 className="text-xl font-bold mb-4 text-red">PROFESSIONAL SUMMARY</h3>
+              <h3 className="text-xl font-bold mb-4 text-red">SUMMARY</h3>
               <p className="text-gray-700 dark:text-gray-300">
-                Full-stack Software Developer skilled in React, Flask, and MySQL. Engineered scalable university systems
-                automating 10K+ records and boosting efficiency by 80%. Recognized for a strong UI/UX mindset,
-                data-driven problem-solving, and building innovative, reliable solutions.
+                Software Developer with 1.5+ years of experience in full-cycle application design and development. A
+                creative problem-solver dedicated to building, scaling, and optimizing impactful, metric-driven software
+                solutions from end-to-end.
               </p>
             </section>
 
@@ -108,8 +108,8 @@ export default function ResumePage() {
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 text-sm mt-1">
                   <strong>Coursework:</strong> (GPA: 3.81/4.0) - Operating Systems, Systems Programming, Design &
-                  Analysis of Computer Algorithms, Computer Security, Programming Languages, Design Patterns, Machine
-                  Learning, Artificial Intelligence, Data Mining, Research
+                  Analysis of Algorithms, Computer Security, Programming Languages, Design Patterns, ML, Artificial
+                  Intelligence, Data Mining, Research
                 </p>
               </div>
             </section>
@@ -119,49 +119,27 @@ export default function ResumePage() {
               <h3 className="text-xl font-bold mb-4 text-red">TECHNICAL SKILLS</h3>
               <div className="space-y-2">
                 <p>
-                  <strong>Languages:</strong> JavaScript, TypeScript, Python, Java, HTML5, CSS3, C#
+                  <strong>Programming Languages:</strong> JavaScript (ES6+), TypeScript, Python, Java, C++, SQL, HTML5,
+                  CSS3
                 </p>
                 <p>
-                  <strong>Frameworks/Libraries:</strong> React.js, Next.js, Redux, Node.js, LangChain, Bootstrap,
-                  Tailwind CSS, Material-UI
+                  <strong>Frameworks & Libraries:</strong> React.js, Redux, Node.js, Express.js, Next.js, Spring Boot,
+                  TailwindCSS, Jest, Babel
                 </p>
                 <p>
-                  <strong>Databases:</strong> SQL, PostgreSQL, NoSQL, Pinecone
+                  <strong>Backend & APIs:</strong> RESTful APIs, GraphQL, JWT Auth, Serverless Functions (AWS Lambda),
+                  WebSockets
                 </p>
                 <p>
-                  <strong>Cloud/DevOps:</strong> Docker, Kubernetes, Google Cloud Platform, Terraform, Vertex AI, CI/CD
+                  <strong>Databases & Caching:</strong> PostgreSQL, MySQL, MongoDB, Redis, Firebase Realtime DB
                 </p>
                 <p>
-                  <strong>AI & Automation Tools:</strong> OpenAI API, Hugging Face, GitHub Copilot, Zapier, Vercel AI
-                  SDK, API Integration
+                  <strong>Cloud & DevOps:</strong> AWS EC2, Docker, Kubernetes, GCP, Unix/Linux Environments, GitHub
+                  Actions, CI/CD Pipelines
                 </p>
                 <p>
-                  <strong>Tools:</strong> Git, GitHub, Postman, Webpack, Parcel, Figma
-                </p>
-                <p>
-                  <strong>Technologies:</strong> RESTful APIs, GraphQL, JSON, AJAX, OAuth, State Management, LLM
-                  Integration, UI/UX, Wireframing, Responsive Web Design, Accessibility, Cross-Browser Compatibility,
-                  Performance Optimization, Agile
-                </p>
-                <p>
-                  <strong>Certifications:</strong>{" "}
-                  <a
-                    href="https://www.coursera.org/account/accomplishments/specialization/certificate/36TPNTC5UW6H"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue hover:underline"
-                  >
-                    Graphic Design Specialization (CalArts)
-                  </a>
-                  ,{" "}
-                  <a
-                    href="https://www.coursera.org/account/accomplishments/specialization/certificate/W6BUVHC77VFC"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-green hover:underline"
-                  >
-                    Google Data Analytics (Google)
-                  </a>
+                  <strong>Tools:</strong> Git, GitHub, npm, Webpack, Figma, Postman, Selenium, VS Code, OpenAI API,
+                  GitHub Copilot
                 </p>
               </div>
             </section>
@@ -182,31 +160,30 @@ export default function ResumePage() {
                 </div>
                 <ul className="list-disc pl-5 mt-2 space-y-1">
                   <li>
-                    Owned end-to-end delivery of a Full Stack Competency-Based Evaluation System from proof of concept
-                    to launch using Python (Flask), MySQL, and React.js, reducing manual processing time by 80%, hosted
-                    live on university servers for use.
+                    Replaced a $30K/year legacy tool with a full-stack evaluation system (Flask, React, MySQL),
+                    automating data migration from Google Sheets to MySQL to reduce faculty data entry time by 80% and
+                    scale across 5 departments.
                   </li>
                   <li>
-                    Achieved 95% user satisfaction by building scalable dashboard UI/UX with Figma, React.js, Redux,
-                    AJAX, and Bootstrap.
+                    Achieved 95% user satisfaction (surveyed 120 users) with an interactive React + Chart.js dashboard,
+                    enabling students to track personalized competency trends and providing faculty a first-ever tool to
+                    visualize specific student coaching needs.
                   </li>
                   <li>
-                    Built RESTful APIs and automated ETL pipelines for 10,000+ records, with monitoring to ensure
-                    reliability and data integrity.
+                    Engineered an AI semantic search by integrating the OpenAI API with the Flask backend, to query
+                    student data via natural language and reducing complex trend analysis from hours to seconds.
                   </li>
                   <li>
-                    Optimized application responsiveness and performance by 40% using React.memo, code splitting, and
-                    performance profiling.
+                    Improved Lighthouse score by 40% via profiling, React.memo, code splitting, & component lazy
+                    loading.
                   </li>
                   <li>
-                    Managed codebase with Git, implemented CI/CD, and ensured quality via API testing with Postman.
+                    Cut deploy failures by 75% by building a CI/CD pipeline (GitHub Actions) that automated pytest &
+                    linting for internal servers.
                   </li>
                   <li>
-                    Presented project lifecycle and impact to 100+ stakeholders, including faculty and board members.
-                  </li>
-                  <li>
-                    Obtained project funding from the American Physical Therapy Association by leading grant writing and
-                    cross-team collaboration.
+                    Secured grant funding from the American Physical Therapy Association and a university-wide rollout
+                    by presenting project outcomes and metrics to a 100+ member board.
                   </li>
                 </ul>
               </div>
@@ -215,7 +192,7 @@ export default function ResumePage() {
               <div className="mb-6">
                 <div className="flex justify-between items-start">
                   <h4 className="font-bold">Nourishing Schools Foundation</h4>
-                  <span className="text-gray-600 dark:text-gray-300">Virginia, USA</span>
+                  <span className="text-gray-600 dark:text-gray-300">Bangalore, India</span>
                 </div>
                 <div className="flex justify-between items-start">
                   <p className="italic">Software Engineer Intern</p>
@@ -223,20 +200,16 @@ export default function ResumePage() {
                 </div>
                 <ul className="list-disc pl-5 mt-2 space-y-1">
                   <li>
-                    Developed and maintained a responsive Single Page Application using React.js, Tailwind CSS, and AJAX
-                    to deliver a game-style dashboard for children aged 4–12 years.
+                    Designed (Figma) and built a game-style SPA (React, Tailwind) for a 500+ student pilot (ages 4-12)
+                    across 3 schools, achieving full WCAG 2.1 AA compliance.
                   </li>
                   <li>
-                    Designed UI in Figma and translated wireframes into accessible front end architecture using React
-                    components.
+                    Engineered the backend game logic (Node.js, REST APIs) to validate student choices (e.g., selecting
+                    healthy ingredients) and guide users through the educational recipe-building module.
                   </li>
                   <li>
-                    Implemented backend services and API integrations to support real-time data updates and seamless
-                    user experiences.
-                  </li>
-                  <li>
-                    Conducted cross-browser and mobile-first testing using Postman and Chrome DevTools, ensuring
-                    application responsiveness.
+                    Ensured a successful day-one launch by authoring an API integration test suite (Postman) that caught
+                    critical bugs pre-production and performing rigorous low-bandwidth & cross-browser testing.
                   </li>
                 </ul>
               </div>
@@ -253,20 +226,16 @@ export default function ResumePage() {
                 </div>
                 <ul className="list-disc pl-5 mt-2 space-y-1">
                   <li>
-                    Led the design and implementation of an adaptive web app using JavaScript, Bootstrap, and MySQL for
-                    backend data.
+                    Led full-stack enhancements (JavaScript, MySQL) for a data-driven web app to deliver dynamic,
+                    mobile-friendly content.
                   </li>
                   <li>
-                    Reduced load times by 20% by integrating RESTful APIs, efficient error handling and request
-                    throttling.
+                    Cut page load times by 20% by normalizing the MySQL schema, optimizing SQL queries, and implementing
+                    API pagination.
                   </li>
                   <li>
-                    Enhanced application visibility by improving SEO through structured data, semantic HTML, and meta
-                    tag optimization.
-                  </li>
-                  <li>
-                    Collaborated with cross-functional teams, maintained thorough project documentation, and
-                    demonstrated strong communication.
+                    Lifted organic traffic by 15% by refactoring legacy pages and implementing structured data and
+                    semantic HTML.
                   </li>
                 </ul>
               </div>
@@ -276,61 +245,42 @@ export default function ResumePage() {
             <section>
               <h3 className="text-xl font-bold mb-4 text-red">PROJECTS</h3>
 
+              {/* Netflix-GPT */}
+              <div className="mb-4">
+                <h4 className="font-bold">Netflix-GPT – AI-Powered Movie Recommender:</h4>
+                <ul className="list-disc pl-5 mt-1 space-y-1">
+                  <li>
+                    Built a full-stack, AI-powered recommender (React, Redux, Tailwind) integrating OpenAI GPT-3.5 and
+                    TMDB APIs.
+                  </li>
+                  <li>
+                    Engineered a scalable UI with reusable Redux slices and secured Firebase Auth (incl. Google OAuth).
+                  </li>
+                  <li>
+                    Boosted API and route performance by 35% using Redis caching, memoized hooks, and lazy loading.
+                  </li>
+                  <li>
+                    Deployed on AWS EC2 with Docker and automated the CI/CD pipeline using GitHub Actions for
+                    zero-downtime rollouts.
+                  </li>
+                </ul>
+              </div>
+
               {/* DelishDish */}
-              <div className="mb-4">
-                <h4 className="font-bold">DelishDish – Real-Time Food Finder:</h4>
-                <ul className="list-disc pl-5 mt-1 space-y-1">
-                  <li>
-                    Developed a React.js web app displaying 10,000+ restaurants in real time using live API data and
-                    modular components, including automated monitoring for uptime and performance metrics.
-                  </li>
-                  <li>
-                    Enhanced UI performance and engagement by integrating Material-UI, custom hooks, and optimized state
-                    management.
-                  </li>
-                </ul>
-              </div>
-
-              {/* ImageExplorer */}
-              <div className="mb-4">
-                <h4 className="font-bold">ImageExplorer – Full-Stack Web Crawler:</h4>
-                <ul className="list-disc pl-5 mt-1 space-y-1">
-                  <li>
-                    Built a multithreaded Java crawler to process 500+ web pages; visualized dynamic data with a
-                    responsive JavaScript front end.
-                  </li>
-                  <li>
-                    Integrated secure cross-origin data handling and Dockerized backend microservices with API
-                    integration for robust deployment.
-                  </li>
-                </ul>
-              </div>
-
-              {/* Patient Health Dashboard */}
-              <div className="mb-4">
-                <h4 className="font-bold">Patient Health Dashboard:</h4>
-                <ul className="list-disc pl-5 mt-1 space-y-1">
-                  <li>
-                    Engineered a responsive React and Tailwind dashboard aggregating real-time data from multiple
-                    healthcare APIs.
-                  </li>
-                  <li>
-                    Visualized key trends with Chart.js and ensured data security via authentication and encrypted API
-                    calls.
-                  </li>
-                </ul>
-              </div>
-
-              {/* Digital Toll Tax Calculator */}
               <div>
-                <h4 className="font-bold">Digital Toll Tax Calculator:</h4>
+                <h4 className="font-bold">DelishDish – Real-Time Restaurant Discovery Platform:</h4>
                 <ul className="list-disc pl-5 mt-1 space-y-1">
                   <li>
-                    Automated toll collection with 90%+ accuracy using Python-Flask and license plate image processing.
+                    Designed a real-time restaurant discovery app with dynamic search/filtering using React, Redux
+                    Toolkit, and TailwindCSS.
                   </li>
                   <li>
-                    Built an admin dashboard (Bootstrap) for real-time traffic monitoring and SQL-backed data, with
-                    RESTful APIs for extensibility.
+                    Improved load performance by 45% by architecting a reusable UI with custom hooks for API fetching
+                    and caching.
+                  </li>
+                  <li>
+                    Normalized state & memoized selectors to eliminate re-renders, ensuring snappy search/PDP/checkout
+                    (verified React Profiler).
                   </li>
                 </ul>
               </div>

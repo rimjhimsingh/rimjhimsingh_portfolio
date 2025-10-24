@@ -21,6 +21,40 @@ const categories = [
 ]
 
 const projectsData = [
+  // Netflix-GPT Project
+  {
+    title: "Netflix-GPT - AI-Powered Movie Recommender",
+    overview:
+      "A full-stack, AI-powered movie recommendation system built with React, Redux, and Tailwind CSS, integrating OpenAI GPT-3.5 and TMDB APIs for intelligent movie suggestions.",
+    github: "https://github.com/rimjhimsingh/netflix-gpt",
+    demo: "#",
+    color: "red",
+    logo: "🎬",
+    skills: [
+      "React.js",
+      "Redux",
+      "Tailwind CSS",
+      "OpenAI GPT-3.5",
+      "TMDB API",
+      "Firebase Auth",
+      "Redis",
+      "AWS EC2",
+      "Docker",
+      "GitHub Actions",
+    ],
+    category: "fullstack",
+    features: [
+      "AI-powered movie recommendations using OpenAI GPT-3.5",
+      "Real-time movie data integration via TMDB APIs",
+      "Scalable UI with reusable Redux slices",
+      "Secure Firebase Authentication including Google OAuth",
+      "35% performance boost with Redis caching and memoized hooks",
+      "Lazy loading for optimized route performance",
+      "Deployed on AWS EC2 with Docker containerization",
+      "Zero-downtime CI/CD pipeline with GitHub Actions",
+    ],
+    comingSoon: true,
+  },
   // Full Stack Development
   {
     title: "Forest Journal - Mindful Habit Tracker",
@@ -735,10 +769,17 @@ const ProjectsGrid = () => {
                       : `bg-${project.color} hover:bg-${project.color}/80 text-dark`
                   } transition-all duration-300 transform hover:scale-105`}
                   onClick={(e) => e.stopPropagation()}
+                  disabled={project.comingSoon}
                 >
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                  </a>
+                  {project.comingSoon ? (
+                    <span className="cursor-not-allowed opacity-70">
+                      <ExternalLink className="mr-2 h-4 w-4" /> Soon Available
+                    </span>
+                  ) : (
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                    </a>
+                  )}
                 </Button>
               </CardFooter>
             </Card>
